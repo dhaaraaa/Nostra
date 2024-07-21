@@ -79,3 +79,19 @@ function wanted() {
         behavior: "smooth"
     })
 }
+
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.scroll-reveal');
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100; 
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add('active');
+        }
+    });
+}
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
