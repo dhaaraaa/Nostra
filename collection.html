@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nastra Collections</title>
+    <link rel="stylesheet" href="./collection.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ----------sign up section------- -->
+    <section id="offerSection" class="p-2  md:p-1" style="background-color: var(--text);">
+        <p class="sm: text-center text-white text-xs md:text-xl ">Sign Up and <span class="font-bold">GET 20% OFF
+            </span>for your first Order </p>
+        <svg id="offer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 text-white font-bold cursor-pointer absolute top-0 right-1 md:right-10 md:top-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+    </section>
+    <!-- ----------------------------------------------       -->
+
+
+    <!-- ---------menu bar--------- -->
+    <section class="flex justify-between z-10 pl-2 p-2 pr-4 md:pl-4 items-center sticky top-0 md:pr-10"
+        style="background-color: var(--bgcolor);">
+        <h1 class="text-2xl font-bold" style="color: var(--text)">NOSTRA</h1>
+        <ul class="hidden md:flex flex-row gap-4 font-medium" style="color: var(--text);">
+            <li class="p-2 hover:underline hover:text-blue-500"><a href="./index.html">Home</a></li>
+            <li class="p-2 hover:underline hover:text-blue-500"><a href="#">Collection</a></li>
+            <li class="p-2 hover:underline hover:text-blue-500"><a href="./contact.html">Contact US</a></li>
+        </ul>
+        <svg id="opened" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+    </section>
+    <!-- ----------------------------menu bar finish here---------- -->
+
+    <!-- ----------------nav bar------------------------------------- -->
+    <section id="navbar" class="fixed top-0 z-10 -left-full w-8/12 h-screen" style="background-color: var(--text);">
+        <div class="relative">
+            <ul class="p-10 flex flex-col gap-4 font-medium" style="color: var(--bgcolor);">
+                <li class="p-2 hover:underline"><a href="./index.html">Home</a></li>
+                <li class="p-2 hover:underline"><a href="#">Collection</a></li>
+                <li class="p-2 hover:underline"><a href="./contact.html">Contact US</a></li>
+            </ul>
+        </div>
+        <svg id="closes" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 absolute right-4 top-4 text-white cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </section>
+    <!-- ----------nav bar finish here------------------- -->
+
+    <section id="Arrival" class="newArrival-container py-4 md:py-8 px-4 md:px-8">
+        <div class=" sticky top-12 md:top-14 input"><input type="text" id="search" class="p-2 md:p-4"
+                placeholder="Search...">
+        </div>
+
+        <div class="flex flex-col justify-between md:flex-row w-full">
+            <div class=" w-full p-5 flex flex-row justify-between  md:w-3/12 md:p-5 md:flex-col md:justify-normal">
+                <div>
+                    <h1 class="text-xl underline font-bold md:text-3xl">Occasion</h1>
+                    <div class="flex items-center mt-5">
+                        <input type="checkbox" name="occasion" data-category="Summer" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Summer</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="occasion" data-category="Party" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Party</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="occasion" data-category="Beach" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Beach</p>
+                    </div>
+
+                </div>
+                <div class="md:mt-10">
+                    <h1 class="text-xl underline font-bold md:text-3xl">Colors</h1>
+                    <div class="flex items-center mt-5">
+                        <input type="checkbox" name="color" data-category="Green" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Green</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="color" data-category="Red" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Red</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="color" data-category="White" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">White</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="color" data-category="Black" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Black</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="color" data-category="Yellow" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Yellow</p>
+                    </div>
+                </div>
+                <div class="md:mt-10">
+                    <h1 class="text-xl underline font-bold md:text-3xl">Arrivals</h1>
+                    <div class="flex items-center mt-5">
+                        <input type="checkbox" name="arrival" data-category="Old" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">Old</p>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" name="arrival" data-category="New" class="w-5 h-5 filter-checkbox">
+                        <p class="ml-2">New</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-9/12">
+
+                <div class="grid grid-cols-3 gap-4 md:grid-cols-3" id="division">
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="yellow"
+                        data-arrival="New" data-occasion="party">
+                        <img src="./images/s1.jpg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Tropical Dream</h1>
+                    </div>
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="Red"
+                        data-arrival="Old" data-occasion="summer">
+                        <img src="./images/s3.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Party Time</h1>
+                    </div>
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="yellow"
+                        data-arrival="new" data-occasion="party">
+                        <img src="./images/s2.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Sun-Kissed Fun</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="green"
+                        data-arrival="old" data-occasion="Beach">
+                        <img src="./images/s4.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Sunset Radiance</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="white"
+                        data-arrival="new" data-occasion="beach">
+                        <img src="./images/s8.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Coastal Charm</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="red"
+                        data-arrival="old" data-occasion="Summer">
+                        <img src="./images/s7.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Sunbeam Splash</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="black"
+                        data-arrival="New" data-occasion="Summer">
+                        <img src="./images/s11.jpg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Heatwave Haven</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="black"
+                        data-arrival="Old" data-occasion="beach">
+                        <img src="./images/s5.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Dance Floor Fever</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="black"
+                        data-arrival="old" data-occasion="summer">
+                        <img src="./images/s6.jpg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Seaside Serenade</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="white"
+                        data-arrival="New" data-occasion="Summer">
+                        <img src="./images/s9.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Midnight Fiesta</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="green"
+                        data-arrival="new" data-occasion="Party">
+                        <img src="./images/s10.jpeg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Party Wave</h1>
+                    </div>
+
+                    <div class="flex flex-col items-center md:p-4 bg-white shadow-md rounded-md" data-color="White"
+                        data-arrival="New" data-occasion="Beach">
+                        <img src="./images/s7.jpg" alt="shirts" class="w-full h-40 md:h-80 object-cover rounded-t-md">
+                        <h1 class="text-xs md:text-xl lg:text-2xl font-bold mt-2 text-center">Beach Bliss</h1>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------news Letter section---------- -->
+    <section class="w-full mt-10">
+        <div class="flex items-center justify-center flex-col" style="width: 95%; margin-left: 2.5%;">
+            <h1 class="text-2xl font-bold text-center md:text-5xl" style="color: var(--text); letter-spacing: 1px;">Join
+                our News Letter</h1>
+            <p class="text-sm  text-center md:text-xl">Signup for our email newspaper to get exclusive discounts,
+                updates, and more</p>
+            <input type="email" placeholder="Enter Your E-mail Id" class="w-full ml-0 mt-5 p-1"
+                style="background-color: none; outline: none; border: 1px solid black; border-radius: 10px; color: var(--secondarytext);">
+            <button class="mt-5 p-2 button text-white rounded-sm" style="background-color: orange;">Subscribe</button>
+        </div>
+    </section>
+    <!-- -------------news section finish here---------- -->
+
+    <!-- ----------footer section--------- -->
+    <section class="p-5 mt-10" style="background-color: var(--gray);">
+        <div class="flex justify-between gap-5 md:flex-col" style="width: 95%; margin-left: 2.5%;">
+            <div class="w-2/4">
+                <h1 class="text-2xl font-bold underline md:text-4xl">Nostra</h1>
+                <p>Nostra is dedicated to providing top-notch educational resources and courses to help you achieve your
+                    goals.</p>
+            </div>
+            <div class="w-1/4 overflow-hidden">
+                <p>Contact: <br>
+                    Phone: +123-456-789 <br>
+                    Email: info@nostra.com</p>
+                <p class="flex"><svg class="h-8 w-8 text-gray-900" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                    </svg>
+                    <svg class="h-8 w-8 text-gray-900" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                    </svg>
+                    <svg class="h-8 w-8 text-gray-900" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+                </p>
+
+            </div>
+            <div class="w-1/4">
+                <p>Quick Links:</p>
+                <a href="#">Gallery</a>
+                <a href="#">Products</a>
+                <a href="#">Service</a>
+                <a href="#">Help Us</a>
+                <a href="#">Terms & Condition</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./collection.js"></script>
+
+</body>
+
+</html>

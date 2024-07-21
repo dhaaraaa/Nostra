@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nastra ContactPage</title>
+    <link rel="stylesheet" href="./collection.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="offerSection" class="p-2  md:p-1" style="background-color: var(--text);">
+        <p class="sm: text-center text-white text-xs md:text-xl ">Sign Up and <span class="font-bold">GET 20% OFF
+            </span>for your first Order </p>
+        <svg id="offer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 text-white font-bold cursor-pointer absolute top-0 right-1 md:right-10 md:top-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+    </section>
+
+    <!-- ---------menu bar--------- -->
+    <section class="flex justify-between z-10 pl-2 p-2 pr-4 md:pl-4 items-center sticky top-0 md:pr-10"
+        style="background-color: var(--bgcolor);">
+        <h1 class="text-2xl font-bold" style="color: var(--text)">NOSTRA</h1>
+        <ul class="hidden md:flex flex-row gap-4 font-medium" style="color: var(--text);">
+            <li class="p-2 hover:underline hover:text-blue-500"><a href="./index.html">Home</a></li>
+            <li class="p-2 hover:underline hover:text-blue-500"><a href="./collection.html">Collection</a></li>
+            <li class="p-2 hover:underline hover:text-blue-500"><a href="#">Contact US</a></li>
+        </ul>
+        <svg id="opened" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 md:hidden cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+    </section>
+    <!-- ----------------------------menu bar finish here---------- -->
+
+    <!-- ----------------nav bar------------------------------------- -->
+    <section id="navbar" class="fixed top-0 z-10 -left-full w-8/12 h-screen" style="background-color: var(--text);">
+        <div class="relative">
+            <ul class="p-10 flex flex-col gap-4 font-medium" style="color: var(--bgcolor);">
+                <li class="p-2 hover:underline"><a href="./index.html">Home</a></li>
+                <li class="p-2 hover:underline"><a href="./collection.html">Collection</a></li>
+                <li class="p-2 hover:underline"><a href="#">Contact US</a></li>
+            </ul>
+        </div>
+        <svg id="closes" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 absolute right-4 top-4 text-white cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </section>
+    <!-- ----------nav bar finish here------------------- -->
+
+    <div class="bg-white border border-4 rounded-lg shadow relative m-10">
+
+        <div class="flex items-start justify-between p-5 border-b rounded-t">
+            <h3 class="text-xl font-semibold">
+                Edit product
+            </h3>
+            <button type="button"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                data-modal-toggle="product-modal">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <form action="#">
+                <div class="grid grid-cols-6 gap-6">
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="product-name" class="text-sm font-medium text-gray-900 block mb-2">Product
+                            Name</label>
+                        <input type="text" name="product-name" id="product-name"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                            required="">
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="category" class="text-sm font-medium text-gray-900 block mb-2">Category</label>
+                        <input type="text" name="category" id="category"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5">
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="brand" class="text-sm font-medium text-gray-900 block mb-2">Brand</label>
+                        <input type="text" name="brand" id="brand"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5">
+                    </div>
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="price" class="text-sm font-medium text-gray-900 block mb-2">Price</label>
+                        <input type="number" name="price" id="price"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5">
+                    </div>
+                    <div class="col-span-full">
+                        <label for="product-details" class="text-sm font-medium text-gray-900 block mb-2">Product
+                            Details</label>
+                        <textarea id="product-details" rows="6"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-4"
+                            placeholder="Details"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="p-6 border-t border-gray-200 rounded-b">
+            <button
+                class="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                type="submit">Save all</button>
+        </div>
+
+    </div>
+
+    <!-- ----------footer section--------- -->
+    <section class="p-5 mt-10" style="background-color: var(--gray);">
+        <div class="flex justify-between gap-5 md:flex-col" style="width: 95%; margin-left: 2.5%;">
+            <div class="w-2/4">
+                <h1 class="text-2xl font-bold underline md:text-4xl">Nostra</h1>
+                <p>Nostra is dedicated to providing top-notch educational resources and courses to help you achieve your
+                    goals.</p>
+            </div>
+            <div class="w-1/4 overflow-hidden">
+                <p>Contact: <br>
+                    Phone: +123-456-789 <br>
+                    Email: info@nostra.com</p>
+                <p class="flex"><svg class="h-8 w-8 text-gray-900" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                    </svg>
+                    <svg class="h-8 w-8 text-gray-900" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                    </svg>
+                    <svg class="h-8 w-8 text-gray-900" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+                </p>
+
+            </div>
+            <div class="w-1/4">
+                <p>Quick Links:</p>
+                <a href="#">Gallery</a>
+                <a href="#">Products</a>
+                <a href="#">Service</a>
+                <a href="#">Help Us</a>
+                <a href="#">Terms & Condition</a>
+            </div>
+        </div>
+    </section>
+    <script src="./contact.js"></script>
+</body>
+
+</html>
